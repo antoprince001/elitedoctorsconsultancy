@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="icon" type="image/ico" href="/assets/logo.png" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <center><h1>Create Account</h1><br><br></center>
+        <form action="/referral/newuser" method="POST">
+            <center>
+        <div class="form-group col-3">
+                <input type="text" class="form-control" placeholder="First name" id="fname" name="fname">
+        </div><div class="form-group col-3"><input type="text" class="form-control" placeholder="Last name" id="lname"name="lname"></div>
+        <div class="form-group col-3">
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+        </div>
+        <div class="form-group col-3">
+            <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+        </div>
+        <div class="form-group col-3">
+            <input type="cpassword" class="form-control" id="cpassword" placeholder="Confirm Password">
+        </div><br>
+        <div class="form-group col-3">
+            <select class="form-control form-control-lg" value="Where did you hear about us?" id="Refer" name="Refer">
+                <option disabled selected>Where did you hear about us?</option>
+                <option>Instagram</option>
+                <option>Google</option>
+                <option>Facebook</option>
+                <option>Referral</option>
+                <option>Other</option>
+            </select><br>
+        </div>
+        <div class="form-group col-3">
+            <input type="text" class="form-control" id="Referral" placeholder="Referral Code (Optional)" name="referral">
+        </div>
+        <button type="submit"   class="btn btn-primary">Submit</button><br><br>
+    </form>
+    Do you have an account?
+    <% for(var i=0;i<7;i++){ %>&nbsp;<% } %>
+    <a type="submit" href="/login" class="btn btn-success">Login</a>
+</center>
+</body>
+</html>

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Elite Doctors Consultancy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Liu+Jian+Mao+Cao|Sacramento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comic+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat|Permanent+Marker|Satisfy&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/ionicons.min.css">
+
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/blog/css/all.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+ <!-- <link rel="apple-touch-icon"  href="apple-touch-icon.png"> -->
+ <link rel="icon" type="image/png" href="/images/logo2.png">
+<!-- <link rel="icon" type="image/png"  href="favicon.ico">
+ <link rel="manifest" href="/site.webmanifest"> -->
+
+</head>
+<style>
+
+  i{
+    padding-bottom: 10px;
+  }
+</style>
+
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+    <img class="fact" src="favicon.ico" alt="">
+    <h2 class="logo" style="font-size: 15px; padding-bottom: 12px;">Elite Doctors Consultancy</h2>
+  
+    <div class="container d-flex align-items-center" id="first">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <form action="#" class="searchform order-lg-last">
+        <div class="form-group d-flex">
+          <input type="text" class="form-control pl-3" placeholder="Search">
+          <button type="submit" placeholder="" class="form-control search"><span class="ion-ios-search"></span></button>
+        </div>
+      </form>
+    
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav mr-auto">
+          &nbsp;&nbsp;
+          <li class="nav-item"><a href="/" class="nav-link pl-0">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="/colleges" class="nav-link">Colleges</a></li>
+          <li class="nav-item"><a href="/blog" class="nav-link" target="_blank">Blog</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+          <% if (username === '') { %>
+          <li class="nav-item"><a href="#" id="button" class="nav-link">Login</a></li>
+          <li class="nav-item"><a href="/referral/Login" id="buttons" class="nav-link">Referral</a></li>
+          <% } else { %>
+          <li class="nav-item"><a href="#" id="button" class="nav-link">Welcome <%= username %></a></li>
+          <li class="nav-item"><a href="/signout" id="buttons" class="nav-link">Logout</a></li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <% if (msg !== '')  { %>
+    <center><div class="alert alert-success alert-dismissible" style="width:initial;">
+      <a href="" class="closer" data-dismiss="alert" aria-label="close" >&times;</a>
+       <%= msg %>
+    </div>
+  </center><% } %>
+
+  <section class="home-slider owl-carousel">
+    <div class="slider-item" style="background-image:url(images/bg_1.jpg);">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate">
+            <span class="subheading">Welcome to Consolve</span>
+            <h1 class="mb-4">We Are The Best Consulting Agency</h1>
+            <p><a href="/colleges" class="btn btn-primary px-4 py-3 mt-3">Our Services</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-item" style="background-image:url(images/bg_2.jpg);">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate">
+            <span class="subheading">Todays Talent, Tommorow Success</span>
+            <h1 class="mb-4">We Help to Grow</h1>
+            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Our Services</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="bg-model">
+   <br><br>
+    <div class="cont">
+      <form action="/welcome" method="POST">
+    <div class="form sign-in">
+      <div class="close" style="color:black;">+</div>
+      <br>
+      <h2>Sign-In</h2>
+      <label class="iit">
+        <span>Email Address</span>
+        <input class="icd" type="email" name="email" value="" required>
+      </label>
+      <label class="iit">
+        <span>Password</span>
+        <input class="icd" type="password" name="password" value="" required>
+      </label>
+      <button class="submit" type="submit" name="button">SignIn</button><br>
+      <center><a class="forgot-password" style="color: black;" href="/forgotPassword">Forgot Password ?</a></center>
+    </form>
+      <div class="social-media">
+        <ul>
+          <li><img src="/images/twitter.png" alt="twitter"></li>
+          <li><img src="/images/facebook.png" alt="fb"></li>
+          <li><img src="/images/instagram.png" alt="insta"></li>
+          <li><img src="/images/google-plus.png" alt="google"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sub-cont">
+      <div class="sweet"  style="background-image: url('/images/grass.jpg'); background-position: 0%;">
+        <div class="sweet-text m-up">
+          <h2>New here?</h2>
+          <p>Sign Up and discover new oppertunites!!</p>
+        </div>
+        <div class="sweet-text m-in">
+          <h2>One of us?</h2>
+          <p>If you already have an account, just sign in.We've miseed you!!</p>
+        </div>
+        <script>
+          var i=1;
+          function change(){
+              var val=document.getElementById('sign');
+              if(i==1)
+              {
+                val.innerHTML="Sign In";
+                i=i*-1;
+              }
+              else
+             {
+              val.innerHTML="Sign Up";
+              i=i*-1;
+             }
+          }
+        </script>
+        <div class="sweet-btn" onclick="change()">
+           <span class="m-up" id="sign">Sign Up</span>
+        </div>
+      </div>
+
+      <div class="forms sign-up">
+        <div class="closes" style="color:black;">+</div>
+        <h2>Sign-Up</h2>
+        <form action="/newuser" method="POST">
+        <label class="iit">
+        <span>Name</span>
+        <input class="icd" type="text" name="name" value="" required>
+        </label>
+        <label class="iit">
+          <span>Email</span>
+          <input class="icd" type="email" name="email" value="" required>
+        </label>
+        <label class="iit">
+          <span>Password</span>
+          <input class="icd" type="password" id="password" name="password" value="" required>
+        </label>
+        <label class="iit">
+            <span>Confirm Password</span>
+            <input class="icd" type="password" id="confirmPassword" name="cpassword" value="" required onblur="return Validate()">
+          </label>
+          <label class="iit">
+            <span>Referral Code</span>
+            <input class="icd" type="text" name="" value="">
+          </label>
+        <button class="submit" type="submit" name="button"  >SignUp</button>
+      </div>
+      <script type="text/javascript">
+        function Validate() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            if (password != confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    </form>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/script.js"></script>
+  </div>
+
+  <section id ="about" class="ftco-section">
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col-md-5 order-md-last wrap-about align-items-stretch">
+          <div class="wrap-about-border ftco-animate">
+            <div class="img" style="background-image: url(images/about.png);"></div>
+            <div class="text">
+              <h3>Read Our Success Story for Inspiration</h3>
+              <p>It doesn’t matter how many times you fail. You only have to be right once and then everyone can tell you that you are an overnight success. </p>
+              <p>All you need in this life is ignorance and confidence, and then success is sure.</p>
+              <p><a href="#contact" class="btn btn-primary py-3 px-4">Contact us</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7 wrap-about pr-md-4 ftco-animate">
+          <h2 class="mb-4">Our Main Features</h2>
+          <p>Since MBBS in Abroad is a big decision, choosing the right consultant will make a lot of
+            difference. Elite Doctor's Consultancy bridges the gap between Students and
+            Universities by providing them world-class benefits and this is what you need. We are
+            best at helping the students with the best universities which are best fitted to their
+            career and which hold the potential of fulfilling their dreams. We provide the best
+            medical admission guidance services and believe in a personalized approach to the
+            medical aspirants.</p>
+          <p>Our transparent work policies and good services make us number one in the field of
+            medical admission guidance sector. It?s time to follow your dreams! Let us join our
+            hands into a brighter world. We will assist you in shaping yourself and be a better
+            being.</p>
+          <div class="row mt-5">
+            <div class="col-lg-6">
+              <div class="services active text-center">
+                <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-collaboration"></span></div>
+                <div class="text media-body">
+                  <h3>Organization</h3>
+                  <p>Our organization is made for the students who wants to pursue their dreams.</p>
+                </div>
+              </div>
+              <div class="services text-center">
+                <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-analysis"></span></div>
+                <div class="text media-body">
+                  <h3>Our Plan</h3>
+                  <p>Our plan is to make the students to have a clear details about their career and where they want to pursue thier studies.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="services text-center">
+                <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-search-engine"></span></div>
+                <div class="text media-body">
+                  <h3>Our Mission</h3>
+                  <p>Our mission is to help out the students who are seeking help in their dreams of studying Abroad.</p>
+                </div>
+              </div>
+              <div class="services text-center">
+                <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-handshake"></span></div>
+                <div class="text media-body">
+                  <h3>Our Vision</h3>
+                  <p>Our vision for the future is to build the consultancy in a good services to help the upcoming students.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </section>
+
+  <section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url(images/bg_5.jpg);" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="col-md-6 py-5 px-md-5">
+          <div class="py-md-5">
+            <div class="heading-section heading-section-white ftco-animate mb-5">
+              <h2 class="mb-4">Get Started</h2>
+              <p>lets start our dreams come true by making contact with the right and trusted peoples.s</p>
+            </div>
+            <form action="#" class="appointment-form ftco-animate">
+              <div class="d-md-flex">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="First Name">
+                </div>
+                <div class="form-group ml-md-4">
+                  <input type="text" class="form-control" placeholder="Last Name">
+                </div>
+              </div>
+              <div class="d-md-flex">
+                <div class="form-group">
+                  <div class="form-field">
+                    <div class="select-wrap">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                      <select name="" id="" class="form-control">
+                        <option value="">Select course</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group ml-md-4">
+                  <input type="text" class="form-control" placeholder="Phone">
+                </div>
+              </div>
+              <div class="d-md-flex">
+                <div class="form-group">
+                  <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
+                </div>
+                <div class="form-group ml-md-4">
+                  <input type="submit" value="Ready to join" class="btn btn-white py-3 px-4">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="journal" class="ftco-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-2">
+        <div class="col-md-8 text-center heading-section ftco-animate">
+          <h2 class="mb-4">
+            <br>It's time to follow your dreams
+            <br></h2>
+          <p>
+            We provide the best
+            medical admission guidance services and believe in a personalized approach to the
+            medical aspirants.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 ftco-animate">
+          <div class="blog-entry">
+            <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('images/grad.webp');">
+              <div class="meta-date text-center p-2">
+                <span class="day">26</span>
+                <span class="mos">June</span>
+                <span class="yr">2019</span>
+              </div>
+            </a>
+            <div class="text bg-white p-4">
+              <h3 class="heading"><a href="#">Medical care research and review</a></h3>
+              <p>MCRR includes original empirical and theoretical research and trends to enable policy makers to make informed decisions, as well as to identify health care trends. This journal is a member of the Committee on Publication Ethics.</p>
+              <div class="d-flex align-items-center mt-4">
+                <p class="mb-0"><a href="https://journals.sagepub.com/home/mcr" class="btn btn-primary" target="_blank">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                <p class="ml-auto mb-0">
+                  <a href="#" class="mr-2">Admin</a>
+                  <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 ftco-animate">
+          <div class="blog-entry">
+            <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('images/med.jpg');">
+              <div class="meta-date text-center p-2">
+                <span class="day">18</span>
+                <span class="mos">MAY</span>
+                <span class="yr">2020</span>
+              </div>
+            </a>
+            <div class="text bg-white p-4">
+              <h3 class="heading"><a href="#">Finding out more about the Study Skills Programme</a></h3>
+              <p>NEET 2020 Syllabus comprises of Physics, Chemistry and Biology subjects. 
+                The National Testing Agency (NTA) organizes a national level entrance exam called as National Eligibility cum Entrance Test (NEET). 
+                </p>
+              <div class="d-flex align-items-center mt-4">
+                <p class="mb-0"><a target="_blank" href="https://www.sarvgyan.com/articles/neet-syllabus" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                <p class="ml-auto mb-0">
+                  <a href="#" class="mr-2">Admin</a>
+                  <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 ftco-animate">
+          <div class="blog-entry">
+            <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('images/doc.jpg');">
+              <div class="meta-date text-center p-2">
+                <span class="day">26</span>
+                <span class="mos">June</span>
+                <span class="yr">2020</span>
+              </div>
+            </a>
+            <div class="text bg-white p-4">
+              <h3 class="heading"><a href=""> How to groom your medical career ?</a></h3>
+              <p>Whether you are studying for pleasure, to further your career, to increase your knowledge of a subject, to acquire new skills, we hope that you will take advantage of the study skills support we offer .</p>
+              <div class="d-flex align-items-center mt-4">
+                <p class="mb-0"><a  target="_blank" href="https://www.conted.ox.ac.uk/about/student-study-skills" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                <p class="ml-auto mb-0">
+                  <a href="#" class="mr-2">Admin</a>
+                  <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<div class="row">
+        <div class="col-md-6 col-lg-4 ftco-animate">
+          <div class="blog-entry">
+            <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('images/image_1.jpg');">
+              <div class="meta-date text-center p-2">
+                <span class="day">26</span>
+                <span class="mos">June</span>
+                <span class="yr">2019</span>
+              </div>
+            </a>
+            <div class="text bg-white p-4">
+              <h3 class="heading"><a href="#">our achievements</a></h3>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              <div class="d-flex align-items-center mt-4">
+                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                <p class="ml-auto mb-0">
+                  <a href="#" class="mr-2">Admin</a>
+                  <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 ftco-animate">
+          <div class="blog-entry">
+            <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('images/image_2.jpg');">
+              <div class="meta-date text-center p-2">
+                <span class="day">26</span>
+                <span class="mos">June</span>
+                <span class="yr">2019</span>
+              </div>
+            </a>
+            <div class="text bg-white p-4">
+              <h3 class="heading"><a href="#">our achievements</a></h3>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              <div class="d-flex align-items-center mt-4">
+                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                <p class="ml-auto mb-0">
+                  <a href="#" class="mr-2">Admin</a>
+                  <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 ftco-animate">
+          <div class="blog-entry">
+            <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('images/image_3.jpg');">
+              <div class="meta-date text-center p-2">
+                <span class="day">26</span>
+                <span class="mos">June</span>
+                <span class="yr">2019</span>
+              </div>
+            </a>
+            <div class="text bg-white p-4">
+              <h3 class="heading"><a href="#">our achievementst</a></h3>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              <div class="d-flex align-items-center mt-4">
+                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                <p class="ml-auto mb-0">
+                  <a href="#" class="mr-2">Admin</a>
+                  <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+    </div>
+  </section>
+
+  <section class="ftco-section testimony-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-8 text-center heading-section ftco-animate">
+          <h2 class="mb-4">Our Clients Says</h2>
+          <p>We don't want to push our ideas to the students, We want to make their dreams into a success one.</p>
+        </div>
+      </div>
+      <div class="row ftco-animate justify-content-center">
+        <div class="col-md-12">
+          <div class="carousel-testimony owl-carousel">
+            <div class="item">
+              <div class="testimony-wrap d-flex">
+                <div class="user-img" style="background-image: url(images/elite_students/sethu.png)">
+                </div>
+                <div class="text pl-4">
+                  <span class="quote d-flex align-items-center justify-content-center">
+                    <i class="icon-quote-left"></i>
+                  </span>
+                  <p>They provided me the necessary details and made me find my way for future goals</p>
+                  <p class="name">Sethu Venkat</p>
+                  <span class="position">Student</span>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimony-wrap d-flex">
+                <div class="user-img" style="background-image: url(images/elite_students/sri_janani.png)">
+                </div>
+                <div class="text pl-4">
+                  <span class="quote d-flex align-items-center justify-content-center">
+                    <i class="icon-quote-left"></i>
+                  </span>
+                  <p>They are very helpful and also they gave me all the details in handful.</p>
+                  <p class="name">Sri Janani</p>
+                  <span class="position">Student</span>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimony-wrap d-flex">
+                <div class="user-img" style="background-image: url(images/elite_students/harini.png)">
+                </div>
+                <div class="text pl-4">
+                  <span class="quote d-flex align-items-center justify-content-center">
+                    <i class="icon-quote-left"></i>
+                  </span>
+                  <p>They made us clear about abroad education and guided us in the best way.</p>
+                  <p class="name">Harini</p>
+                  <span class="position">Student</span>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimony-wrap d-flex">
+                <div class="user-img" style="background-image: url(images/elite_students/nandhini.png)">
+                </div>
+                <div class="text pl-4">
+                  <span class="quote d-flex align-items-center justify-content-center">
+                    <i class="icon-quote-left"></i>
+                  </span>
+                  <p>They took care of everything from the first till the last and guided me in the correct way. I trust them.</p>
+                  <p class="name">Nandhini</p>
+                  <span class="position">Student</span>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimony-wrap d-flex">
+                <div class="user-img" style="background-image: url(images/elite_students/libin.png)">
+                </div>
+                <div class="text pl-4">
+                  <span class="quote d-flex align-items-center justify-content-center">
+                    <i class="icon-quote-left"></i>
+                  </span>
+                  <p>They explained to me the process clearly and they made my future shine and now I am grateful to them.</p>
+                  <p class="name">Libin Samraj</p>
+                  <span class="position">Student</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer id="contact" class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-6 col-lg-3">
+          <div class="ftco-footer-widget mb-5">
+            <h2 class="ftco-heading-2">Have a Questions?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><span class="icon icon-map-marker"></span><span class="text">203 amman theru krishna nagar</span></li>
+                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 987654321</span></a></li>
+                <li><a  href="mailto:elitedoctorsconsultancy01@gmail.com"><span class="icon icon-envelope"></span><span class="mail">&nbsp;elitedoctorsconsultancy01@gmail.com</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="ftco-footer-widget mb-5">
+            <h2 class="ftco-heading-2">Recent Blog</h2>
+            <div class="block-21 mb-4 d-flex">
+              <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+              <div class="text">
+                <h3 class="heading"><a href="#journal">Even the all-powerful Pointing has no control about</a></h3>
+                <div class="meta">
+                  <div><a href="#"><span class="icon-calendar"></span> June 27, 2019</a></div>
+                  <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                  <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-21 mb-5 d-flex">
+              <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+              <div class="text">
+                <h3 class="heading"><a href="#journal">Even the all-powerful Pointing has no control about</a></h3>
+                <div class="meta">
+                  <div><a href="#"><span class="icon-calendar"></span> June 27, 2019</a></div>
+                  <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                  <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="ftco-footer-widget mb-5 ml-md-4">
+            <h2 class="ftco-heading-2">Links</h2>
+            <ul class="list-unstyled">
+              <li><a href="#ftco-nav"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+              <li><a href="#about"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+              <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Universities</a></li>
+              <li><a href="#journal"><span class="ion-ios-arrow-round-forward mr-2"></span>Journals</a></li>
+              <li><a href="#contact"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+              <li><a href="#ftco-nav"><span class="ion-ios-arrow-round-forward mr-2"></span>Admin</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="ftco-footer-widget mb-5">
+          <h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
+          <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+
+        <p>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;<script>
+            document.write(new Date().getFullYear());
+          </script> Elite Doctors
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+
+    
+    </div>
+    </div>
+    <div class="move-up">
+      <style>
+        i{
+          float: right;
+          padding-right: 25px;
+        
+        }
+
+        i:after{
+          transition:0.2s;
+        }
+
+      </style>
+      <span><a href="#first"><i class="fas fa-arrow-circle-up fa-2x"></i></a></span>
+      </div>
+  </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+  <script type="text/javascript">
+  document.querySelector('.bg-model').style.display = 'grid';
+    document.getElementById('button').addEventListener('click',function() {
+      document.querySelector('.bg-model').style.display = 'grid';
+    });//Or use flex
+    document.querySelector('.close').addEventListener('click',function() {
+      document.querySelector('.bg-model').style.display= 'none';
+    });
+    document.querySelector('.closes').addEventListener('click',function() {
+      document.querySelector('.bg-model').style.display= 'none';
+    });
+
+  </script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/ip.js"></script>
+  
+</body>
+
+</html>

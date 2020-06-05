@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=2.0;">
+    <meta name="description" content="Best medical colleges throughout the world where you could be studying now. Apply now to grab a seat">
+	<link rel="icon" type="image/png" href="/images/logo2.png">
+
+	<title>Elite College</title>
+
+	<!-- bootstrap cdn -->
+
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,900" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+	<!-- font awesome cdn -->
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<!-- style.css -->
+	<link rel="stylesheet" type="text/css" href="stylecol.css"/>
+	<!-- jquery cdn -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<style>
+
+body{
+	font-family: 'Nunito', sans-serif;
+}
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btnn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btnn:hover {
+  background-color: #ddd;
+}
+
+.btnn.active {
+  background-color: #666;
+  color: white;
+}
+	
+.main{
+
+	background-image: url("https://i.pinimg.com/originals/37/8c/d4/378cd4ea61758d6e802d4612b9c76583.jpg"); 
+	background-repeat: no-repeat;
+	 background-size: cover;
+	height: 900px;
+	padding-bottom: 3px;
+	font-family: 'Source Code Pro', monospace;
+	
+}
+
+img{
+	position: absolute;
+	object-fit: cover;
+	height: 5vw;
+	padding-top:70px;
+}
+
+#myBtnContainer{
+	padding-left: 250px;
+}
+
+</style>
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+			<!--<div class="col-md-12 navbar">
+				<a href="index.html" class="logo navbar-brand text-white offset-md-2">ELITE-DOCTORS</a>
+				<ul class="nav">
+					<li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">ASK US</a></li>
+					<li class="nav-item"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> TOP COLLEGES <span class="caret"></span></a>
+				        <ul class="dropdown-menu">
+				          <li><a href="#"> Top Medical colleges in Russia</a></li>
+				          <li><a href="#">Top Medical colleges in Phillipines</a></li>
+				          <li><a href="#">Top Medical colleges in China</a></li>
+				        </ul>
+				      </li>
+					
+				</ul>
+			</div>-->
+
+			 <header>
+		      <div class="container">
+		        <div id="branding">
+		          <h3><span class="highlight">Elite</span> Doctors Consultancy</h3>
+		        </div>
+		        <nav>
+		          <ul>
+		            <li class="current"><a href="/">Home</a></li>
+		            <li><a href="#col">Featured Countries</a></li>
+		            <!--<li><a href="#myBtnContainer">Top Colleges</a></li>-->
+					<li><a href="/applynow" method="GET">APPLY NOW</a></li>
+					
+		           
+		          </ul>
+		        </nav>
+		      </div>
+		    </header>
+
+			<!-- slider banner	 -->
+
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			  <ol class="carousel-indicators">
+			    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			  </ol>
+			  <div class="carousel-inner">
+			    <div class="carousel-item active">
+			    	<div class="info">
+			      		<h1></h1>
+			      		<div class="container">
+			      		<p><form>
+						    <div class="form-group">
+						      <label for="usr"><font color="white"><h2> EXPLORE COLLEGES , COURSES THAT SUIT YOU THE BEST </h2></font></label>
+						      
+						      
+						    </div>
+						  </form>
+			      		</p>
+			      	</div>
+			      	</div>
+			    </div>
+			    <div class="carousel-item">
+			    	<div class="info">
+			      		<h3><font color="white"><br>
+</font>
+</h3>
+			      	</div>
+			    </div>
+			    <div class="carousel-item">
+			    	<div class="info">
+			      		
+			      		<h4><font color="white"></font></h4>
+			      	</div>
+			    </div>
+			  </div>
+			  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</div>
+		</div>
+	</div>
+<div class="main">
+	<div class="container" id='col' >
+		<br>
+		<br>
+		<h2> <font color="black"><style>
+			h2{
+		text-align: center;
+	}</style>
+	FEATURED COUNTRIES</font></h2>
+ 	<br>
+  
+  
+
+<div class="container" >
+  <!--<div class="row">
+    <div class="col-md-4">
+      <div class="card card-1">
+        <h3> MBBS IN RUSSIA</h3>
+        <p> RUSSIA MBBS is a new-fangled upcoming goal for Indian students.Medical courses offered in RUSSIA are recognized by renowned interntional medical councils namely WHO , FAIMER , IMED , MCI.
+	</p>
+ <a href="/russia" class="btn btn-info" role="button">EXPLORE COLLEGES</a>
+       </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card card-2">
+        <h3>MBBS IN KYRGYZSTAN</h3>
+        <p>
+        	MBBS in Kyrgyzstan is affordable. The complete course of MBBS in Kyrgyzstan from any top medical university in Kyrgyzstan can be completed in 15 lakhs onwards.
+        </p>
+         <a href="/kyrgyzstan" class="btn btn-info" role="button">EXPLORE COLLEGES</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-3">
+        <h3> MBBS IN PHILIPPINES</h3>
+        <p>MBBS in Philippines is the best destination for students to study medicine.The medical colleges offer low fees structure for students with high quality of education</p>
+        <a href="/philippines" class="btn btn-info" role="button">EXPLORE COLLEGES</a>
+      </div>
+	</div>
+	<div class="col-md-4">
+		<div class="card card-3">
+		  <h3> MBBS IN PHILIPPINES</h3>
+		  <p>MBBS in Philippines is the best destination for students to study medicine.The medical colleges offer low fees structure for students with high quality of education</p>
+		  <a href="/philippines" class="btn btn-info" role="button">EXPLORE COLLEGES</a>
+		</div>
+	  </div>
+  </div>-->
+  <div class="row">
+	<div class="card" style="width:400px">
+	  <img class="card-img-top" src="./assets/img/russiaintro.jpg"style="width:100%; height: 300px;">
+	  <div class="card-body">
+		
+		<!--<p class="card-text"><font color="white">Some example text some example text. John Doe is an architect and engineer</font></p>-->
+		
+		<h4 class="card-title">  
+			<br>
+			<br>
+			<br>
+			<font color="white">
+			<br><br><br><br><br>MBBS IN RUSSIA </font></h4>
+			<p></p>
+			<a href="/russia" class="btn btn-primary"> <font color="black"> <b>VIEW DETAILS</b></font></a>
+	  </div>
+	</div>
+  
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+  
+  <div class="card" style="width:400px">
+	<img class="card-img-top" src="./assets/img/philippinesintro.jpg"style="width:100%; height: 300px;">
+	<div class="card-body">
+	  
+	  <!--<p class="card-text"><font color="white">Some example text some example text. John Doe is an architect and engineer</font></p>-->
+	  <h4 class="card-title">
+		<br>
+		<br>
+		<br>  <font color="white">
+		  <br><br><br><br>MBBS IN PHILIPPINES </font></h4>
+		  <p></p>
+		  <a href="/philippines" class="btn btn-primary"><font color="black"> <b>VIEW DETAILS</b></font></a>
+	</div>
+  </div>
+	
+  
+	 </div>
+	 <br>
+   <br>
+   <div class="row">
+   	
+	<div class="card" style="width:400px">
+		<img class="card-img-top" src="./assets/img/ukraineintro.jpg"style="width:100%; height: 300px;">
+		<div class="card-body">
+		  
+		  <!--<p class="card-text"><font color="white">Some example text some example text. John Doe is an architect and engineer</font></p>-->
+		  
+		  <h4 class="card-title"> 
+			<br>
+			<br>
+			<br>
+			<br>
+			 <font color="white">
+			  <br>,<br><br>MBBS IN UKRAINE </font></h4>
+			  <p></p>
+			  <a href="/ukraine" class="btn btn-primary"><font color="black"> <b>VIEW DETAILS</b></font></a>
+		</div>
+	  </div>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+<div class="card" style="width:400px">
+	<img class="card-img-top" src="./assets/img/kyrgintro.jpg"style="width:100%; height: 300px;">
+	<div class="card-body">
+	  
+	  <!--<p class="card-text"><font color="white">Some example text some example text. John Doe is an architect and engineer</font></p>-->
+	 
+	  <h4 class="card-title"> 
+		  <br>
+		  <br>
+		  <br>
+		  <br>
+		   <font color="white">
+		  <br><br><br>MBBS IN KYRGYZSTAN </font></h4>
+		  <p></p> 
+		  <a href="/kyrgyzstan" class="btn btn-primary"> <font color="black"> <b>VIEW DETAILS</b></font></a>
+	</div>
+  </div>
+  
+
+</div>
+</div>
+
+<br>
+<br>
+</div>	
+	<!--<div>
+	
+	  <div class="filterDiv  bg-info cars">
+		  <font size="3px"><a href="">Crimea state medical university</a></font>
+		</div>
+		  <div class="filterDiv  bg-primary cars">
+			<font size="3px">Davao state medical university</font>
+		  </div>
+		  <div class="filterDiv  bg-secondary cars">
+			<font size="3px">Davao state medical university</font>
+		  </div>
+		  <div class="filterDiv  bg-warning cars">
+			<font size="3px">Davao state medical university</font>
+		  </div>
+		  <div class="filterDiv  bg-success cars">
+			<font size="3px">Davao state medical university</font>
+		  </div>
+		  <div class="filterDiv  bg-dark cars">
+			<font size="3px">Davao state medical university</font>
+		  </div>
+		  <div class="filterDiv  bg-light cars">
+			<font size="3px">Davao state medical university</font>
+		  </div>
+		  <div class="filterDiv  cars">
+			<font size="3px">Davao state medical university</font>
+		  </div>
+		  <div class="filterDiv  cars">
+			<font size="3px">Davao state medical university</font>
+		  </div>
+		  <div class="filterDiv  cars">
+			<font size="3px">Davao state medical university</font>
+		  </div>
+		  <div class="filterDiv  cars">
+			<font size="3px">Davao state medical university</font>
+		  </div>
+		  <div class="filterDiv  cars">
+			<font size="3px">Davao state medical university</font>
+		  </div>
+		  <div class="filterDiv  cars">
+			<font size="3px">Davao state medical university..</font>
+		  </div>
+	</div>-->
+</div>
+<br>
+<br> 
+<!--<center><font color="white">Copyrights @ ELITE-DOCTORS-CONSULTANCY-2020</font></center>-->
+<!--<h2> <font color="white">TOP COLLEGES</font> </h2>
+<br>
+<div id="myBtnContainer">
+  <button class="but" onclick="filterSelection('all')"> ALL COLLEGES</button>
+  <button class="btnn active" onclick="filterSelection('cars')"> RUSSIA</button>
+  <button class="btnn" onclick="filterSelection('animals')"> PHILIPPINES</button>
+  <button class="btnn" onclick="filterSelection('fruits')"> KYRGYZSTAN</button>
+  <button class="btnn" onclick="filterSelection('colors')"> UKRAINE</button>
+</div>
+
+<div class="container1"><br>
+  <div class="filterDiv cars">
+  		<img src="./assets/img/crimea.jpg" width="200" height="100"><br>
+  		<font color="white">CRIMEA STATE MEDICAL UNIVERSITY</font><br>
+  		<a href="/crimea">VIEW DETAILS </a>
+</div> &nbsp; &nbsp; &nbsp; &nbsp; 
+  <div class="filterDiv cars">
+  <img src="./assets/img/volgograd.jpg" width="200" height="100"><br>
+ <font color="white"> VOLGOGRAD MEDICAL UNIVERSITY </font><br>
+  <a href="/volgograd">VIEW DETAILS </a> &nbsp; &nbsp; &nbsp; &nbsp; </div>
+  <div class="filterDiv colors">Red</div>
+  <div class="filterDiv cars ">
+  	 <img src="./assets/img/stavropol.jpg" width="200" height="100"><br>
+	   <font color="white">STAVROPOL STATE MEDICAL UNIVERSITY </font><br>
+<a href="/stavropol">VIEW DETAILS </a></div> &nbsp; &nbsp; &nbsp; &nbsp; 
+ <div class="filterDiv fruits">
+  <img src="./assets/img/asian.jpg" width="200" height="100"><font color="white"><br>ASIAN STATE MEDICAL UNIVERSITY</font><br>
+	<a href="/asian">VIEW DETAILS </a>
+</div>
+	<div class="filterDiv animals">
+		<img src="./assets/img/ourlady.jpg" width="200" height="100"><br>
+		<font color="white">OUR LADY STATE MEDICAL UNIVERSITY</font><br>	
+	  <a href="/ourlady">VIEW DETAILS </a> 
+	</div>
+	<div class="filterDiv fruits">
+		<img src="./assets/img/ism.jpg" width="200" height="100"><br><font color="white">ISM STATE MEDICAL UNIVERSITY</font><br>
+	   
+	  <a href="/ism">VIEW DETAILS </a></div>	
+	  <div class="filterDiv fruits">
+		<img src="./assets/img/jalalabad.jpg" width="200" height="100"><font color="white">JALALABAD STATE MEDICAL UNIVERSITY</font><br>
+		<a href="/jalalabad">VIEW DETAILS </a></div>
+
+		<div class="filterDiv fruits">
+			<img src="./assets/img/osh.jpg" width="200" height="100"><br><font color="white">OSH STATE MEDICAL UNIVERSITY</font><br>
+			
+		  <a href="/oshmed">VIEW DETAILS </a> </div>
+		  <div class="filterDiv colors">
+			  <img src="./assets/img/lviv.jpg" width="200" height="100"><br><font color="white">DANYALO HALYTSKY LVIV NATIONAL MEDICAL UNIVERSITY</font><br>
+			  <a href="/lviv">VIEW DETAILS </a></div>
+			  
+			  <div class="filterDiv colors">
+				<img src="./assets/img/lvivvet.jpeg" width="200" height="100"><br><font color="white">LVIV NATIONAL STEPAN GZHYTSKY
+					UNIVERSITY</font><br>
+				<a href="/lvivvet">VIEW DETAILS </a></div>
+		
+				<div class="filterDiv colors">
+					<img src="./assets/img/vinmain.jpeg" width="200" height="100"><br><font color="white">VINNYTSIA NATIONAL  PIROGOV
+						MEDICAL UNIVERSITY</font><br>
+					<a href="/vinnytsia">VIEW DETAILS </a></div>
+		
+					<div class="filterDiv colors">
+						<img src="./assets/img/bogomolets.jpeg" width="200" height="100"><br><font color="white">O.O BOGOMOLETS NATIONAL
+							MEDICAL UNIVERSITY</font><br>
+						<a href="/bogomolets">VIEW DETAILS </a></div>
+						<div class="filterDiv animals">
+							<img src="./assets/img/davao.jpg" width="200" height="100"><font color="white"><br>DAVAO STATE MEDICAL UNIVERSITY</font><br>
+						  <a href="/davao">VIEW DETAILS </a>
+					  </div>
+					
+
+		</div> 
+		
+
+</div>
+
+<br>
+<br>
+<div class="filterDiv animals">
+  	<img src="./assets/img/davao.jpg" width="200" height="100"><font color="white">DAVAO STATE MEDICAL UNIVERSITY</font><br>
+	<a href="/davao">VIEW DETAILS </a>
+</div>-->
+<!--<div class="container1">
+  <div class="filterDiv animals">
+  <img src="./assets/img/ourlady.jpg" width="200" height="100"><br>
+  <font color="white">OUR LADY STATE MEDICAL UNIVERSITY</font><br>
+  
+<a href="/ourlady">VIEW DETAILS </a> 
+</div>
+  <div class="filterDiv fruits">
+  <img src="./assets/img/ism.jpg" width="200" height="100"><br><font color="white">ISM STATE MEDICAL UNIVERSITY</font><br>
+ 
+<a href="/ism">VIEW DETAILS </a></div>
+  <div class="filterDiv fruits animals">Kiwi</div>
+  <div class="filterDiv fruits">
+  	<img src="./assets/img/jalalabad.jpg" width="200" height="100"><font color="white">JALALABAD STATE MEDICAL UNIVERSITY</font><br>
+  	<a href="/jalalabad">VIEW DETAILS </a></div>
+  <div class="filterDiv fruits">
+  <img src="./assets/img/osh.jpg" width="200" height="100"><br><font color="white">OSH STATE MEDICAL UNIVERSITY</font><br>
+  
+<a href="/oshmed">VIEW DETAILS </a> </div>
+  <div class="filterDiv animals">Cow</div>
+  <div class="filterDiv colors">
+  	<img src="./assets/img/lviv.jpg" width="200" height="100"><br><font color="white">DANYALO HALYTSKY LVIV NATIONAL MEDICAL UNIVERSITY</font><br>
+	  <a href="/lviv">VIEW DETAILS </a></div>
+	  
+	  <div class="filterDiv colors">
+		<img src="./assets/img/lvivvet.jpeg" width="200" height="100"><br><font color="white">LVIV NATIONAL STEPAN GZHYTSKY
+			UNIVERSITY</font><br>
+		<a href="/lvivvet">VIEW DETAILS </a></div>
+
+		<div class="filterDiv colors">
+			<img src="./assets/img/vinmain.jpeg" width="200" height="100"><br><font color="white">VINNYTSIA NATIONAL  PIROGOV
+				MEDICAL UNIVERSITY</font><br>
+			<a href="/vinnytsia">VIEW DETAILS </a></div>
+
+			<div class="filterDiv colors">
+				<img src="./assets/img/bogomolets.jpeg" width="200" height="100"><br><font color="white">O.O BOGOMOLETS NATIONAL
+					MEDICAL UNIVERSITY</font><br>
+				<a href="/bogomolets">VIEW DETAILS </a></div>
+</div> -->
+  	<!--<p> <h2> LEARN MORE 
+  	</h2></p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ac3ZoRlJ6Is" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+		
+		-->
+	 <!--<footer>
+      <p>Elite Consultancy - Copyright &copy; 2020</p>
+    </footer>-->
+
+	<!-- scripts -->
+	<!-- bootstrap javascript cdn -->
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	
+
+<script>
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5ebfd7fa8ee2956d73a1b5d7/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+
+
+
+
+	</script>
+	
+</body>
+</html>
+
+
+

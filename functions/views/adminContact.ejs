@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Users</title>
+    <link rel="icon" type="image/png" href="/images/logo2.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<style>
+    @import 'https://fonts.googleapis.com/css?family=Lato:300,400';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    height: 100%;
+    position: relative;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+a {
+    color: #fff;
+    text-decoration: none; 
+}
+
+.nav-btn {
+    width: 100%;
+    height: 35px;
+    padding-top: 4px;
+    color: #D5D3D3;
+    background-color: #212121;           ;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+.nav-btn:active {
+    background-color: #090909; 
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    background-color: #274C6B;
+    display: none;
+}
+
+header .logo {
+    opacity: 0.9;
+    font-size: 120%;
+    padding-top: 9px;
+    padding-left: 8px;
+    color: #fff;
+}
+header .logo span {
+    font-weight: 300;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #302F2F;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    bottom: 0;
+    box-shadow: 1px 0px 10px #777;
+}
+
+.sidebar nav > a {
+    font-size: 150%;
+    display: inline-block;
+    padding: 30px 0px;
+    padding-left: 30px;
+    opacity: 0.7;
+    transition: all 0.2s;
+}
+.sidebar nav > a:hover {
+    opacity: 1;
+}
+
+.sidebar nav a span {
+    font-weight: 300;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    font-size: 70%;
+    padding: 19px 0;    
+    padding-left: 20px;
+    border-bottom: 0.5px solid #111;
+}
+
+.sidebar nav ul li:nth-child(1):hover {
+    background-color: #e67e22;
+}
+
+.sidebar nav ul li:nth-child(1).active {
+    background-color: #e67e22;
+}
+
+.sidebar nav ul li:nth-child(2):hover {
+    background-color: #2980b9;
+}
+
+.sidebar nav ul li:nth-child(2).active {
+    background-color: #2980b9;
+}
+
+.sidebar nav ul li:nth-child(3):hover {
+    background-color: #16a085;
+}
+
+.sidebar nav ul li:nth-child(3).active {
+    background-color: #16a085;
+}
+
+.sidebar nav ul li:nth-child(4):hover {
+    background-color: #8e44ad;
+}
+
+.sidebar nav ul li:nth-child(4).active {
+    background-color: #8e44ad;
+}
+
+.sidebar nav ul li:nth-child(5):hover {
+    background-color: #f1c40f;
+}
+
+.sidebar nav ul li:nth-child(5).active {
+    background-color: #8b7cb4;
+}
+
+
+.sidebar nav ul li a {
+    color: #D7D5D5;
+}
+
+.sidebar nav ul li:hover a{
+    color: #fff;
+}
+
+.main-content {
+    background-color: #fafafa;
+    width: calc(100% - 250px);
+    height: 100%;
+    margin-left: 250px;
+    padding: 20px 30px;
+}
+.main-content .panel-wrapper {
+    margin: 20px 0;
+    box-shadow: 0px 1px 5px #777;
+}
+
+.main-content .panel-wrapper .panel-head {
+    background-color: #00A5F2;
+    color: #fff;
+    padding: 10px 10px;
+    border: 1px solid #00A5F2;
+}
+.main-content .panel-wrapper .panel-body {
+    padding: 20px 10px;
+    font-size: 80%;
+}
+
+@media only screen and (max-width: 420px){
+    header {
+        display: block;
+    }
+    .nav-btn {
+        display: block;
+    }
+    .sidebar {
+        position: relative;
+        height: 378px;
+        width: 100%;
+        display: none;
+        margin-bottom: 40px;
+        z-index: 1000;
+    }
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+        z-index: -1;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    header {
+        display: block;
+    }
+    .nav-btn {
+        display: block;
+    }
+    .sidebar {
+        position: relative;
+        height: 378px;
+        width: 100%;
+        display: none;
+        margin-bottom: 40px;
+        z-index: 1000;
+    }
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+        z-index: -1;
+        position: relative;
+    }
+}
+
+</style>
+<body>
+<header>
+    </header>
+<div class="nav-btn">Menu</div>
+<div class="container">
+    
+    <div class="sidebar">
+        <nav>
+            <a href="">Elite<span>Doctors</span></a>
+            <ul>
+                    <a href="/admin/dashboard"><li>Dashboard</li></a>
+                    <a href="/admin/users"><li >Users</li></a>
+                    <a href="/admin/referral"><li>Referrals</li></a>
+                    <a href="/admin/applications"><li>Applications</li></a>
+                    <!-- <a href="/admin/queries"><li>Queries</li></a>
+                    <a href="/admin/blogposts"><li>Blog Posts</li></a> -->
+                    <a href="/admin/contact"><li  class="active">Contact users</li></a>
+                    <a href="/signout"><li>Logout</li></a>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <% if(msg !== '') { %>
+        <div class="alert alert-success alert-dismissible ">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+
+            <%= msg %>
+          </div>
+        <% } %>
+        <h1>Contact users</h1>
+        <p>To send via elitedoctors mail  </p>
+
+   <form action="/adminMail" method="POST">  
+        <label>To:</label><br><input type="email" name="to"  style="width: 40%;"  value=<%= mail %> xrequired><br><br>
+        <label>Subject:</label><br><input type="text" name="subject" style="width: 60%;">
+        
+        <br><br>
+    
+
+        <label>Message body:</label><br>
+        <center>
+    <textarea name="content"  style="width: 100%;height: 225px;" required></textarea>
+        <br>
+        <input type="submit" class="btn btn-info" value="Send mail">
+    </center>
+    </form>
+    
+</body>
+</html>

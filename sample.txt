@@ -1,0 +1,327 @@
+Templates
+
+
+
+
+db.collection('blogs').get()
+  .then((snapshot) => {
+    var blogs=[];
+    snapshot.docs.forEach(doc =>{
+        blogs.push(doc.data());
+      console.log(blogs);
+     // res.render('home.ejs',{ data : blogs });
+    });
+    console.log(snapshot.docs);
+
+    res.render('home.ejs',{ data : blogs });
+  })
+  .catch((err) => {
+
+    console.log('Error getting documents', err);
+  });
+}); 
+
+
+<% for ( var i = 0; i < data.length; i++){ var datum=data[i]; %>
+
+  datum.title
+router.get('/',(req,res)=>{
+    res.render('createAcc.ejs');
+});
+
+
+
+
+// //Data write template
+// router.get('/',(req, res, next) => {
+//     var email='test@gmail.com';
+//     let docRef = db.collection('users').doc(email);
+
+//     let setAda = docRef.set({
+//     email: email,
+//     first: 'Bjarne',
+//     last: 'Stroutstrup',
+//     born: 1815
+// });
+//      res.json(setAda);
+// });
+
+
+// //Data retrieve template
+// router.get('/retrieve',()=>{
+// db.collection('users').get()
+//   .then((snapshot) => {
+//     snapshot.forEach((doc) => {
+//       console.log(doc.id, '=>', doc.data());
+//     });
+//   })
+//   .catch((err) => {
+//     console.log('Error getting documents', err);
+//   });
+// });
+router.get('/check',(req,res)=>{
+var ref=db.collection("admin").doc('HC3dakymsenC9UA6EFA0');
+  ref.get()
+    .then((snapshot)=>{
+      var val=snapshot.data();
+      console.log(val.email);
+      res.send(val.password);
+    })
+    .catch((error)=>{
+      console.log(error);
+    })
+});
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <form action="/" method="GET">
+
+<div class="wrapper">
+    <div class="title">
+      Registration Form
+    </div>
+    <div class="form">
+     
+      <div class="inputfield">
+        <label>First Name</label>
+        <textarea class="textarea" name="fname" disabled>/textarea>
+     </div> 
+     <div class="inputfield">
+      <label>Last Name</label>
+      <textarea class="textarea" name="lname" disabled>hello</textarea>
+   </div> 
+   <div class="inputfield">
+    <label>Gender</label>
+    <textarea class="textarea" name="gender" disabled>hello</textarea>
+ </div> 
+ <div class="inputfield">
+  <label>Address</label>
+  <textarea class="textarea" name="add" disabled>hello</textarea>
+</div> 
+<div class="inputfield">
+  <label>Email address</label>
+  <textarea class="textarea" name="madd" disabled>hello</textarea>
+</div> 
+<div class="inputfield">
+  <label>Phone Number</label>
+  <textarea class="textarea" name="phn" disabled>hello</textarea>
+</div> 
+<div class="inputfield">
+  <label>NEET Mark</label>
+  <textarea class="textarea" name="nm" disabled>hello</textarea>
+</div> 
+<div class="inputfield">
+  <label>12th Mark</label>
+  <textarea class="textarea" name="m" disabled>hello</textarea>
+</div> 
+
+      
+    </div>
+</div>	
+</form>
+	
+</body>
+</html>
+
+
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background: url(bg.jpg);
+  padding: 0 10px;
+}
+.wrapper{
+  max-width: 500px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  padding: 30px;
+}
+
+.wrapper .title{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+.wrapper .form h1{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.wrapper .form{
+  width: 100%;
+}
+
+.wrapper .form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield label{
+   width: 100%;
+   color: #757575;
+   outline: none;
+  border: 0px solid #0005039d;
+   margin-right: 10px;
+  font-size: 15px;
+  padding:10px 10px;
+  border-radius: 0px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 0px solid #0005039d;
+  background-color:rgba(0, 0, 0, 0);
+  font-size: 15px;
+  padding: 10px 10px;
+  border-radius: 0px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+  
+  padding-right: 2px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+  font-size: 15px;
+}
+
+.wrapper .form .inputfield .custom_select select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus{
+  border: 1px solid #d3d3d3;
+}
+
+.wrapper .form .inputfield p{
+   font-size: 14px;
+   color: #757575;
+}
+.wrapper .form .inputfield .check{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.wrapper .form .inputfield .check .checkmark{
+  width: 15px;
+  height: 15px;
+  border: 1px solid #d3d3d3;
+  display: block;
+  position: relative;
+}
+.wrapper .form .inputfield .check .checkmark:before{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
+  background: #fec107;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
+  display: block;
+}
+
+.wrapper .form .inputfield .btn{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background:  #000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover{
+  background: #d3d3d3;
+}
+
+.wrapper .form .inputfield:last-child{
+  margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+  .wrapper .form .inputfield{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .form .inputfield label{
+    margin-bottom: 5px;
+  }s$(r@+ key
+  .wrapper .form .inputfield.terms{
+    flex-direction: row;
+  }
+}

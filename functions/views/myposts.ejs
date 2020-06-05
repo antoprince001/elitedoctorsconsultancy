@@ -1,0 +1,105 @@
+<html>
+<head>
+	<title> NEW POST </title>
+  <link rel="icon" type="image/png" href="/images/logo2.png">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body id="hello">
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/backhome"> <i class="fa fa-home fa-2x" aria-hidden="true"></i> </a>
+      <a href=""><font color="white" size=6px >ELITE BLOG</font></a>
+    
+    
+
+</nav>
+
+
+	<!-- <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href='/backhome'><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+    </div>
+    <ul class="nav navbar-nav">
+   
+    </ul>
+    </div>
+  </nav> -->
+  
+  <div class="container">
+     
+   
+      <% for ( var i = 0; i < data.length; i++){ var datum=data[i]; var ppid=pid[i]; %> 
+      <form method="POST">
+      <div class="jumbotron">
+           <h2 class="display-4"> <%=datum.title %> </h2>  
+              <hr> 
+               
+           
+                <img src="<%= datum.imgurl %>" width=400px height=400px>
+                <input type="hidden" name="k" value=<%= ppid %> >
+                 <hr class="my-2">
+                 <p> <%=datum.content %> </p>
+                <br>
+                
+                 <button formaction="/editpost"><i class="fa fa-pencil-square fa-2x" aria-hidden="true"></i> 
+                  </button>
+                  &nbsp; 
+                 &nbsp;
+                 <button formaction="/deletepost "> <i class="fa fa-trash fa-2x" aria-hidden="true"></i> </button>
+      </div>
+    </form>  
+        <% } %>    
+            
+    
+    
+  </div>
+  
+
+         <!---- <div class="jumbotron">
+            <h1 class="display-4"> title </h1>  
+               <hr> 
+                 <p> aabcvderfghijklmnopqrstuvwxyz </p>
+                 <p> <b> REFERENCES :</b>  </p>
+     
+                  <hr class="my-2">
+                  <p>  POSTED ON <b>  </b></p> <br>
+               <a href=" "><i class="fa fa-pencil-square fa-2x" aria-hidden="true"></i>  </a> &nbsp; 
+               &nbsp;
+               <a href=" "> <i class="fa fa-trash fa-2x" aria-hidden="true"></i> </a>
+           </div>-->
+ 
+
+</body>
+
+<style>
+    #hello{
+      padding :10px;
+    background: url("https://images.befunky.com/wp/wp-2016-03-blur-background-featured-1.jpg?auto=format&fm=jpg&q=75&w=880&ixlib=js-1.4.1");
+    background-repeat: no-repeat;
+    background-size: 2000px;
+    }
+
+    .navbar-brand{
+      padding-top: 2px;
+    }
+
+  
+  </style>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163860370-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163860370-1');
+</script>
+<link rel="icon" type="image/png" href="/images/logo2.png">
+
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
+  <link rel="stylesheet" href="stylecol.css">
+  
+</head>
+<body>
+
+ 
+
+<div class="wrapper">
+    <div class="title">
+      Registration Form
+    </div>
+    <div class="form">
+      <form action="/applied" method="POST">
+       <div class="inputfield">
+        
+          <label>First Name*</label>
+          <input type="text" class="input" name ="fname" required>
+       </div>  
+        <div class="inputfield">
+          <label>Last Name*</label>
+          <input type="text" class="input" name="lname" required>
+       </div>  
+
+       <!--<div class="inputfield">
+          <label>Gender*</label>
+          <font color="white">
+            <div class="radio" class></div>
+            <input type="radio" class="input" name="gender" value="male" >Male<br>
+          </font>
+        </div
+
+          <input type="radio" class="input" name="gender" value="female">Female</font>-->
+          <div class="inputfield">
+            <label>Gender*</label>
+          <div class="radio">
+            <label><input type="radio" name="gender" checked><font color="white" size=2px>&nbsp;&nbsp;Male</font></label>
+          </div>
+          &nbsp; &nbsp;
+          <div class="radio">
+            <label><input type="radio" name="gender"><font color="white" size=2px>&nbsp;&nbsp;Female</font></label>
+          </div>
+          </div>
+        <br>
+        <div class="inputfield">
+        
+          <label>DOB*</label>
+          <input type="date" class="input" name ="dob" required>
+       </div>  
+
+      <br> <div class="inputfield">
+          <label>Address*</label>
+          <textarea class="textarea" name="address" required></textarea>
+       </div> 
+      
+        
+       
+        <div class="inputfield">
+          <label>Email Address*</label>
+          <input type="text" class="input" name="email" value=<%= mail %> disabled required>
+       </div> 
+      <div class="inputfield">
+          <label>Phone Number*</label>
+          <input type="text" class="input" name="phone" required>
+       </div> 
+         <div class="inputfield">
+          <label>NEET mark</label>
+          <input type="text" class="input" name="neet">
+       </div> 
+         <div class="inputfield">
+          <label>12th mark*</label>
+          <input type="text" class="input" name="mark" required>
+       </div> 
+      <div class="inputfield">
+        <label>COUNTRY</label>
+        <select id="input" name="country" onchange="random_function()" required>
+            <option>SELECT COUNTRY</option>
+            <option>RUSSIA</option>
+            <option>PHILIPPINES</option>
+            <option>UKRAINE</option>
+            <option>KYRGYZSTAN</option>
+        </select>
+    </div>
+    <div class="inputfield">
+      <label> COLLEGE</label>
+      <select id="output" name="college" required> </select>
+   </div>
+      <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox">
+            <span class="checkmark" required></span>
+          </label>
+          <p>I hereby verify that above mentioned facts are true to best of my knowledge and belief.</p>
+       </div> 
+      <div class="inputfield">
+        <input type="submit" value="Register" class="btn">
+
+      </div>
+    </div>
+</div>	
+</form>
+	
+</body>
+<script>
+
+
+  function random_function()
+            {
+                var a=document.getElementById("input").value;
+                if(a==="RUSSIA")
+                {
+                    var arr=["CRIMEA STATE MEDICAL UNIVERSITY","VOLGOGRAD MEDICAL UNIVERSITY","STAVROPOL STATE MEDICAL UNIVERSITY"];
+                }
+                else if(a==="PHILIPPINES")
+                {
+                    var arr=["DAVAO STATE MEDICAL UNIVERSITY","OUR LADY STATE MEDICAL UNIVERSITY"];
+                }
+                else if(a==="UKRAINE")
+                {
+                    var arr=["DANYALO HALYTSKY LVIV NATIONAL MEDICAL UNIVERSITY","LVIV NATIONAL STEPAN GZHYTSKY UNIVERSITY","VINNYTSIA NATIONAL PIROGOV MEDICAL UNIVERSITY","O.O BOGOMOLETS NATIONAL	MEDICAL UNIVERSITY"];
+                }
+
+                else if(a==="KYRGYZSTAN")
+                {
+                    var arr=["ASIAN STATE MEDICAL UNIVERSITY","ISM STATE MEDICAL UNIVERSITY","JALALABAD STATE MEDICAL UNIVERSITY","OSH STATE MEDICAL UNIVERSITY"];
+                }
+                var string="";
+             
+                for(i=0;i<arr.length;i++)
+                {
+                    string=string+"<option value="+arr[i]+">"+arr[i]+"</option>";
+                }
+                document.getElementById("output").innerHTML=string;
+            }
+</script>
+</html>

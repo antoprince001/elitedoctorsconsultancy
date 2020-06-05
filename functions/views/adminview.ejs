@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Elite | Application</title>
+  <style>
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+
+  padding: 0 10px;
+  background-color: #e0e0e0;
+}
+.wrapper{
+  max-width: 500px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  padding: 30px;
+}
+
+.wrapper .title{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+.wrapper .form h1{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.wrapper .form{
+  width: 100%;
+}
+
+.wrapper .form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+
+.button5 {
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: black;
+  border: 2px solid #555555;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px
+}
+
+.button6 {
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.wrapper .form .inputfield label{
+   width: 100%;
+   color: white;
+   outline: none;
+  border: 0px solid #0005039d;
+   margin-right: 10px;
+  font-size: 15px;
+  padding:10px 10px;
+  border-radius: 0px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 0px solid #0005039d;
+  background-color:rgba(0, 0, 0, 0);
+  font-size: 15px;
+  padding: 10px 10px;
+  border-radius: 0px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+  
+  padding-right: 5px;
+  resize: none;
+  font-size: 15px;
+  color:white;
+}
+
+.wrapper .form .inputfield .custom_select{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+  font-size: 15px;
+}
+
+.wrapper .form .inputfield .custom_select select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus{
+  border: 1px solid #d3d3d3;
+}
+
+.wrapper .form .inputfield p{
+   font-size: 14px;
+   color: #757575;
+}
+.wrapper .form .inputfield .check{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.wrapper .form .inputfield .check .checkmark{
+  width: 15px;
+  height: 15px;
+  border: 1px solid #d3d3d3;
+  display: block;
+  position: relative;
+}
+.wrapper .form .inputfield .check .checkmark:before{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
+  background: #fec107;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
+  display: block;
+}
+
+.wrapper .form .inputfield .btn{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background:  #000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover{
+  background: #d3d3d3;
+}
+
+.wrapper .form .inputfield:last-child{
+  margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+  .wrapper .form .inputfield{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .form .inputfield label{
+    margin-bottom: 5px;
+  }
+  .wrapper .form .inputfield.terms{
+    flex-direction: row;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <form action="/changeStatus" method="POST">
+
+<div class="wrapper">
+    <div class="title">
+      Application
+      Status : <%= datum.status %>
+    </div>
+   
+    <div class="form">
+     
+      <div class="inputfield">
+        <label>First Name</label>
+        <textarea class="textarea" name="fname" disabled><%= datum.fname %></textarea>
+     </div> 
+     <div class="inputfield">
+      <label>Last Name</label>
+      <textarea class="textarea" name="lname" disabled><%= datum.lname %></textarea>
+   </div> 
+   <div class="inputfield">
+    <label>Gender</label>
+    <textarea class="textarea" name="gender" disabled><%= datum.gender %></textarea>
+ </div> 
+ <div class="inputfield">
+  <label>Address</label>
+  <textarea class="textarea" name="add" disabled><%= datum.address %></textarea>
+</div> 
+<div class="inputfield">
+  <label>Email address</label>
+  <textarea class="textarea" name="madd" disabled><%= datum.email%></textarea>
+</div> 
+<div class="inputfield">
+  <label>Phone Number</label>
+  <textarea class="textarea" name="phn" disabled><%= datum.phone %></textarea>
+</div> 
+<div class="inputfield">
+  <label>NEET Mark</label>
+  <textarea class="textarea" name="nm" disabled><%= datum.neet %></textarea>
+</div> 
+<div class="inputfield">
+  <label>Date Of Birth</label>
+  <textarea class="textarea" name="m" disabled><%= datum.dob %></textarea>
+</div> 
+<div class="inputfield">
+  <label>College</label>
+  <textarea class="textarea" name="college" disabled><%= datum.college %></textarea>
+</div> 
+<div class="inputfield">
+  <label>Country</label>
+  <textarea class="textarea" name="country" disabled><%= datum.country %></textarea>
+</div>   
+<div class="cent" style="padding-left: 27%;">
+<input type="hidden" name="appid" value=<%= appid %>>
+<input type="hidden" name="email" value=<%= datum.email%> >
+  <select name="status" class ="button5" required>
+    <option>Applied</option>
+    <option>Processing</option>
+    <option>Approved</option>
+    <option>Rejected</option>
+</select><br><br><br>
+<button type="submit" class="button6">Change status</button>
+</div>
+
+    </div>
+</div>	
+</form>
+	
+</body>
+</html>

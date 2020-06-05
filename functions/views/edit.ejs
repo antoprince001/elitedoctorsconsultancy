@@ -1,0 +1,231 @@
+<html>
+<head>
+  <title> EDIT POST </title>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!--<script src='https://kit.fontawesome.com/a076d05399.js'></script>-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+  <title>EliteBlog</title>
+  <link rel="icon" type="image/png" href="/images/logo2.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Slabo+27px&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href=".blog/css/all.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+  
+  <!-- --------- Owl-Carousel ------------------->
+  <link rel="stylesheet" href=".blog/css/owl.carousel.min.css">
+  <link rel="stylesheet" href=".blog/css/owl.theme.default.min.css">
+
+  <!-- ------------ AOS Library ------------------------- -->
+  <link rel="stylesheet" href=".blog/css/aos.css">
+  <link rel="icon" type="image/ico" href="/assets/logo.png" />
+  <!-- Custom Style   -->
+  <link rel="stylesheet" href=".blog/css/Style.css">
+
+  
+
+  
+<style>
+
+  #posting{
+    font-family: 'Merriweather Sans', sans-serif;
+font-family: 'Noto Sans JP', sans-serif;
+  }
+ 
+    
+  
+    #hello{
+    
+    background: url("https://st4.depositphotos.com/7595566/21753/i/1600/depositphotos_217530438-stock-photo-fashion-blog-office-desk-laptop.jpg");
+    background-repeat: no-repeat;
+    background-size:  1700px;
+    }
+
+  #cont{
+      height: 200px;
+      width:800px;
+  }
+
+    .navbar-header{
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-left: 2.5rem;
+      font-size:25px;
+    }
+
+    .navbar-brand{
+      text-align: right;
+      font-size: 12px;
+      
+    }
+  </style>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Blog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body id="hello" style="color:white">
+  <!--<nav class="nav"> -->
+    <!--<div class="nav-menu flex-row">-->
+        
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="" href='/'> <font color="white" > ELITE-BLOG  </font> </a>
+         
+       <!-- <a href="https://www.facebook.com/"><i class="fa fa-facebook-f" style="font-size:24px; float:right;"></i></a> 
+  
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram" style="font-size:24px"></i></a>
+          <a href="https://twitter.com/login"><i class="fab fa-twitter" style="font-size:24px"></i></a>
+          <a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin" style="font-size:24px"></i></a>
+          <a href="/login"><i class="fas fa-user-circle" style="font-size:24px"></i></a>
+        </div>
+        </div>
+        
+      -->
+      
+    </nav>
+
+
+       <!-- <div class="toggle-collapse">
+            <div class="toggle-icons">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div> -->
+       <!-- <div>
+            <ul class="nav-items">
+                <li class="nav-link">
+                    <a href="#">Home</a>
+                </li>
+                
+                
+                <li class="nav-link">
+                    <a href="#">Pages</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div> -->
+        <!--<div class="social text-gray">-->
+           
+            
+      <!-- </div> -->
+      
+<!--</nav>   -->
+    <!--<div class="col-sm-2 sidenav">
+      <ul class="nav nav-pills nav-stacked">
+        <h4></h4>
+        <li class="active"><a href="/">HOME</a></li>
+        <li><a href="/new"> WHAT'S NEW ?</a></li>
+        
+      </ul><br>
+    </div>-->
+
+   <div class="container" id="posting">
+    <div class="col-sm-8">
+
+     
+      <form action="/edited" method="POST">
+
+        <h3><b> <font color="black">Edit your Content</font> </b></h3> <br>
+        <div class="form-group">
+          <label for="title">
+            <b><font color="black">TITLE</font> </b></label>
+          <input type="text" class="form-control" id="tit" name="title" value= <%= barr.title %> >
+        </div> <br>
+         <div class="form-group">
+          <label for="img"> <b> <font color="black">IMAGE (If any)</font></b> </label>
+          <input type="text" class="form-control" required="" id="picture" name="pic" >
+        </div> <br>
+        
+        <input type="hidden"  name="iid"  value=<%= barr[3] %>>
+        <!--<div class="form-group"> -->
+          <label for="comm"><b> <font color="black">POST CONTENT :</font></b></label> <br>
+          
+          <p id="com" ></p>
+
+        <!-- <a href="#comment"> <i class="fa fa-bold fa-lg" aria-hidden="true"></i> </a> &nbsp; &nbsp;
+          <i class="fa fa-italic fa-lg" aria-hidden="true"> </a> </i>&nbsp; &nbsp;
+          <i class="fa fa-underline fa-lg" aria-hidden="true"></i>&nbsp; &nbsp;
+          <i class="fa fa-align-right fa-lg" aria-hidden="true"></i>&nbsp; &nbsp;
+          <i class="fa fa-align-left fa-lg" aria-hidden="true"></i>&nbsp; &nbsp;
+          <i class="fa fa-quote-left fa-lg" aria-hidden="true"></i>&nbsp; &nbsp;
+          <i class="fa fa-quote-right fa-lg" aria-hidden="true"></i><br>&nbsp; &nbsp; -->
+         <!-- <br> 
+          <textarea class="form-control fa-lg" rows="15" cols="10" id="comment" name="comment" placeholder="Leave your comment here">
+
+          </textarea>
+
+          <p id="com"> </p>
+          <textarea class="form-control fa-lg" rows="5" cols="5" id="comm" placeholder="comment">
+
+          </textarea>-->
+       <!-- </div> --> 
+       <div class="form-group">
+      
+      <!--  <textarea class="form-control" rows="10" id="comment" name="comment" placeholder="<%= content %>" ></textarea> -->
+      <input type="text" class="form-control" id="cont" name="txtarea" >
+      </div>
+      
+        <button type="submit" class="btn btn-info"> <font size="3.5rem" color="black"><b>SUBMIT</b></font> </button>
+        <br>
+      </form>
+  </div>
+
+  <div class="col-sm-8">
+
+    
+  </div>
+
+</div>
+
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-analytics.js"></script>
+
+<script>
+
+function myFunction() {
+  var str = document.getElementById("comment");
+  var result = str.bold();
+  document.getElementById("com").innerHTML = result;
+}
+
+document.getElementById("hello").addEventListener("click", myFunc);
+
+function myFunc() {
+  var str = document.getElementById("comment");
+  var result = str.bold();
+  document.getElementById("com").innerHTML = result;
+  
+}
+
+</script>
+
+</html>
