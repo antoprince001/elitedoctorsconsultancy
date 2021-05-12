@@ -20,7 +20,7 @@
     "firestore-store": "^2.0.1",
     "helmet": "^3.22.0",
     "http": "0.0.1-security",
-    "nodemailer": "^6.4.6",
+    "nodemailer": "^6.4.16",
     "path": "^0.12.7",
     "socket.io": "^2.3.0"
   }
