@@ -22,6 +22,6 @@
     "http": "0.0.1-security",
     "nodemailer": "^6.4.6",
     "path": "^0.12.7",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.5.0"
   }
 }
